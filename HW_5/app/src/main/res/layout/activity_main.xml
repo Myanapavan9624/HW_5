@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="95dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="40sp"
+        android:gravity="center"
+        android:text="Enter URL: "
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/urlText"
+        android:layout_width="270dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24sp"
+        android:ems="10"
+        android:hint="url"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/messages"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.09"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/runnable"
+        android:layout_width="90dp"
+        android:layout_height="85dp"
+        android:layout_margin="20sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:onClick="runRunnable"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:text="Run Runnable"
+        android:textSize="12sp"
+        app:iconSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/messages"
+        android:layout_width="90dp"
+        android:layout_height="85dp"
+        android:layout_margin="20sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:onClick="runMessages"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:text="Run Messages"
+        android:textSize="12sp"
+        app:iconSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/runnable"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/async"
+        android:layout_width="70dp"
+        android:layout_height="88dp"
+        android:layout_margin="20sp"
+        android:layout_marginStart="12dp"
+        android:onClick="runAsyncTask"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:text="Run Async"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/messages"
+        app:layout_constraintTop_toBottomOf="@+id/urlText" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="70dp"
+        android:layout_height="88dp"
+        android:layout_margin="20sp"
+        android:onClick="resetImage"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:text="Reset Image"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toEndOf="@+id/async"
+        app:layout_constraintTop_toBottomOf="@+id/urlText" />
+
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="328dp"
+        android:layout_height="360dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messages"
+        app:layout_constraintVertical_bias="0.342"
+        app:srcCompat="@drawable/apple" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
